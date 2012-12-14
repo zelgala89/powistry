@@ -78,7 +78,8 @@ class TasksController < ApplicationController
           est.complexity_id = params[:complexity_id]
           est.save
         end
-        format.html { redirect_to project_tasks_url, notice: 'Task was successfully updated.' }
+        #format.html { redirect_to project_tasks_url, notice: 'Task was successfully updated.' }
+        format.html { redirect_to :back, notice: 'Task was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
